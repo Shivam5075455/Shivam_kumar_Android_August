@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragments.EditProfileFragment">
+
+    <!--    <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--        android:id="@+id/imgEPProfileImage"-->
+    <!--        android:layout_width="@dimen/dim_130"-->
+    <!--        android:layout_height="@dimen/dim_130"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="@dimen/dim_10"-->
+    <!--        android:src="@drawable/ic_launcher_background" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginEnd="@dimen/dim_10"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_3"
+            android:text="@string/user_details"
+            android:textSize="@dimen/dim_25"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgEditProfileImage"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="140dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_width="0dp" />
+
+        <TextView
+            android:id="@+id/tvEPChangeProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="@string/change_profile_photo"
+            android:textSize="@dimen/dim_15"
+
+             />
+
+        <EditText
+            android:id="@+id/etEPUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_20"
+            android:hint="@string/username"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etEPEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_5"
+            android:hint="@string/email"
+            android:minHeight="48dp" />
+
+
+        <EditText
+            android:id="@+id/etEPAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_5"
+            android:hint="@string/address"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etEPPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_5"
+            android:hint="@string/phone"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Male"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_20"
+                android:layout_marginTop="@dimen/dim_20"
+                android:layout_marginEnd="@dimen/dim_20"
+                android:layout_weight="1"
+                android:backgroundTint="@color/app_theme"
+                android:text="@string/cancel"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_20"
+                android:layout_marginTop="@dimen/dim_20"
+                android:layout_marginEnd="@dimen/dim_20"
+                android:layout_weight="1"
+                android:backgroundTint="@color/app_theme"
+                android:text="@string/save"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
